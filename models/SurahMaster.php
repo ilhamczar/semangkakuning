@@ -10,6 +10,8 @@ use Yii;
  * @property integer $Surah_Number
  * @property string $Surah_Name
  * @property string $Description
+ *
+ * @property PhraseMaster[] $phraseMasters
  */
 class SurahMaster extends \yii\db\ActiveRecord
 {
@@ -27,10 +29,9 @@ class SurahMaster extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Surah_Number'], 'required'],
-            [['Surah_Number'], 'integer'],
-            [['Surah_Name'], 'string', 'max' => 50],
-            [['Description'], 'string', 'max' => 255]
+            [['Surah_Name'], 'required'],
+            [['Description'], 'string'],
+            [['Surah_Name'], 'string', 'max' => 50]
         ];
     }
 
@@ -44,6 +45,14 @@ class SurahMaster extends \yii\db\ActiveRecord
             'Surah_Name' => Yii::t('app', 'Surah  Name'),
             'Description' => Yii::t('app', 'Description'),
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPhraseMasters()
+    {
+        return $this->hasMany(PhraseMaster::className(), ['Surah_Number' => 'Surah_Number']);
     }
 
     /**

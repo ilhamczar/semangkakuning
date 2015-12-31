@@ -30,21 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'Surah_Number',
             'Surah_Name',
-            [
-            	'attribute' => 'Description',
-            	'format' => 'text',
-            	'label' => 'Description',
-            	'contentOptions' => [
-            		'style'=>'	font-size: 30px;
-  								font-family: me_quran, Traditional Arabic;
-  								font-weight: bold;
-  								text-align: right;
-  								width: 50%'
-  					],
-            ],
-
-            ['class' => 'yii\grid\ActionColumn'
-            ],
+            'Description'
         ],
     ]); ?>
 
