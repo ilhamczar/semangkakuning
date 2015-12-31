@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=alquran-catalogue',
+    'dsn' => 'mysql:host=localhost;dbname=categorized_alquran',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',
