@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'Surah_Number',
             'Surah_Name',
-            'Description'
+            'Description:ntext',
         ],
     ]) ?>
 

@@ -12,11 +12,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Surah_Number')->textInput() ?>
-
     <?= $form->field($model, 'Surah_Name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Description')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'Description')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

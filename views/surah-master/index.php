@@ -22,15 +22,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'headerRowOptions' => [
-        	'style' =>'	align: right;'     				
-        ],
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
             'Surah_Number',
             'Surah_Name',
-            'Description'
+            'Description:ntext',
+
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 
