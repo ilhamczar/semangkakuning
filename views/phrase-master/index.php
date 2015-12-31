@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\PhraseMasterSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Phrase Masters';
+$this->title = Yii::t('app', 'Phrase Masters');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="phrase-master-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Phrase Master', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Create Phrase Master'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'Phrase_ID',
-            'Database_ID',
+            'Language_ID',
             'Surah_Number',
             'Phrase_Number',
             'Phrase_Content:ntext',

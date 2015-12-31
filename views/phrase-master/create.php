@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\PhraseMaster */
 
-$this->title = 'Create Phrase Master';
-$this->params['breadcrumbs'][] = ['label' => 'Phrase Masters', 'url' => ['index']];
+$this->title = Yii::t('app', 'Create Phrase Master');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Phrase Masters'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="phrase-master-create">

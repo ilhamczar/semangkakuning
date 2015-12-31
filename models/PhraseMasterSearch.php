@@ -18,7 +18,7 @@ class PhraseMasterSearch extends PhraseMaster
     public function rules()
     {
         return [
-            [['Phrase_ID', 'Database_ID', 'Surah_Number', 'Phrase_Number'], 'integer'],
+            [['Phrase_ID', 'Language_ID', 'Surah_Number', 'Phrase_Number'], 'integer'],
             [['Phrase_Content'], 'safe'],
         ];
     }
@@ -57,7 +57,7 @@ class PhraseMasterSearch extends PhraseMaster
 
         $query->andFilterWhere([
             'Phrase_ID' => $this->Phrase_ID,
-            'Database_ID' => $this->Database_ID,
+            'Language_ID' => $this->Language_ID,
             'Surah_Number' => $this->Surah_Number,
             'Phrase_Number' => $this->Phrase_Number,
         ]);

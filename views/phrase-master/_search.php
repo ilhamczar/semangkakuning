@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Phrase_ID') ?>
 
-    <?= $form->field($model, 'Database_ID') ?>
+    <?= $form->field($model, 'Language_ID') ?>
 
     <?= $form->field($model, 'Surah_Number') ?>
 
@@ -26,8 +26,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'Phrase_Content') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
+        <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-default']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
