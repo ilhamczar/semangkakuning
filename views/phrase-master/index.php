@@ -28,8 +28,17 @@ $this->params['breadcrumbs'][] = $this->title;
             'Phrase_ID',
             'Language_ID',
             'Surah_Number',
-            'Phrase_Number',
-            'Phrase_Content:ntext',
+            'Phrase_Number',[
+            	'attribute' => 'Phrase_Content',
+            	'format' => 'text',
+            	'label' => 'Phrase Content',
+            	'contentOptions' => [
+            		'style'=>'	font-family: me_quran;
+  								font-weight: bold;
+  								text-align: right;
+  								width: 70%'
+  					],
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
