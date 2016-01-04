@@ -32,3 +32,4 @@ phpunit.phar
 #codelobster files
 semangkakuning.clpprj
 requirements.php
+config/web.php
