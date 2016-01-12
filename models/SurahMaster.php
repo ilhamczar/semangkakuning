@@ -20,7 +20,7 @@ class SurahMaster extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'surah_master';
+        return 'Surah_Master';
     }
 
     /**

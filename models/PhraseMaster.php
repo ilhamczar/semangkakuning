@@ -22,7 +22,7 @@ class PhraseMaster extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'phrase_master';
+        return 'Phrase_Master';
     }
 
     /**
