@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\PhraseMasterSearch;
 
 class SiteController extends Controller
 {
@@ -46,12 +47,24 @@ class SiteController extends Controller
             ],
         ];
     }
-
+	
     public function actionIndex()
     {
         return $this->render('index');
     }
-
+	
+	public function actionQuran()
+    {
+        $searchModel = new PhraseMasterSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		$dataProvider -> setPagination(false);
+		
+        return $this->render('quran', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+	
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {
