@@ -26,7 +26,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                'brandLabel' => 'kenalquran.com',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
@@ -35,12 +35,14 @@ AppAsset::register($this);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
-                    ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
-                    ['label' => 'Contact', 'url' => ['/site/contact']],                    
-                    ['label' => 'Say', 'url' => ['/site/say']],                   
-                    ['label' => 'Surah', 'url' => ['/surah-master/index']],        
-                    ['label' => 'Phrase', 'url' => ['/phrase-master/index']],
+                    ['label' => 'Quran', 'url' => ['/site/index']],
+                    ['label' => 'Mukjizat', 'url' => ['/site/mukjizat']],
+                    ['label' => 'Catatan', 'url' => ['/site/catatan']],
+                    //['label' => 'About', 'url' => ['/site/about']],
+                    //['label' => 'Contact', 'url' => ['/site/contact']],                    
+                    //['label' => 'Say', 'url' => ['/site/say']],                   
+                    //['label' => 'Surah', 'url' => ['/surah-master/index']],        
+                    //['label' => 'Phrase', 'url' => ['/phrase-master/index']],
                     Yii::$app->user->isGuest ?
                         ['label' => 'Login', 'url' => ['/site/login']] :
                         ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',

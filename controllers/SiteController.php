@@ -50,7 +50,14 @@ class SiteController extends Controller
 	
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new PhraseMasterSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		$dataProvider -> setPagination(false);
+		
+        return $this->render('inde', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
 	
 	public function actionQuran()
