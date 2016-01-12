@@ -54,24 +54,22 @@ class SiteController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 		$dataProvider -> setPagination(false);
 		
-        return $this->render('inde', [
+        return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
 	
-	public function actionQuran()
+	public function actionMukjizat()
     {
-        $searchModel = new PhraseMasterSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-		$dataProvider -> setPagination(false);
-		
-        return $this->render('quran', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+		return $this->render('mukjizat');
     }
 	
+	public function actionCatatan()
+    {
+		return $this->render('catatan');
+    }
+    
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {
