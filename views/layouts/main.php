@@ -43,11 +43,11 @@ AppAsset::register($this);
                     //['label' => 'Say', 'url' => ['/site/say']],                   
                     //['label' => 'Surah', 'url' => ['/surah-master/index']],        
                     //['label' => 'Phrase', 'url' => ['/phrase-master/index']],
-                    Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/site/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
+                    //Yii::$app->user->isGuest ?
+                    //    ['label' => 'Login', 'url' => ['/site/login']] :
+                    //    ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                    //        'url' => ['/site/logout'],
+                    //        'linkOptions' => ['data-method' => 'post']],
                 ],
             ]);
             NavBar::end();
