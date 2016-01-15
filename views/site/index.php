@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
             	'attribute' => 'Phrase_Content',
             	'format' => 'text',
-            	'label' => 'Phrase Content',
+            	'label' => 'Ayat',
             	'contentOptions' => [
             		'style'=>'	font-family: me_quran;
   								font-weight: bold;
