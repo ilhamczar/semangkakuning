@@ -40,9 +40,11 @@ class PhraseMasterSearch extends PhraseMaster
      * @return ActiveDataProvider
      */
     public function search($params)
-    {
+    {        
+        $languageId = [1, 68];
+        
         $query = PhraseMaster::find();
-
+        
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
@@ -57,13 +59,15 @@ class PhraseMasterSearch extends PhraseMaster
 
         $query->andFilterWhere([
             'Phrase_ID' => $this->Phrase_ID,
-            'Language_ID' => $this->Language_ID,
+            'Language_ID' => $languageId,
             'Surah_Number' => $this->Surah_Number,
             'Phrase_Number' => $this->Phrase_Number,
         ]);
-
+		
         $query->andFilterWhere(['like', 'Phrase_Content', $this->Phrase_Content]);
-
+                		
+		$query->orderBy('Surah_Number, Phrase_Number');
+		
         return $dataProvider;
     }
 }
